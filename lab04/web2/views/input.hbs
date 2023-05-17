@@ -1,12 +1,23 @@
 <form action="/output" method="post">
    <h1>ADD NEW STUDENT</h1>
-   Name: <input type="text" name="ten">
+   Name: <input type="text" name="name">
    <br><br>
-   Age: <input type="number" name="tuoi">
+   Age: <input type="number" name="age">
    <br><br>
    Email: <input type="email" name="email">
    <br><br>
-   DOB: <input type="date" name="ngaysinh">
+   DOB: <input type="date" name="dob">
+   <br><br>
+   Gender: 
+   <input type="radio" name="gender" value="Male"> Male 
+   <input type="radio" name="gender" value="Female"> Female 
+   <br><br>
+   Major:
+   <select name="major" id="">
+      <option value="IT">IT</option>
+      <option value="Business">Business</option>
+      <option value="Graphic Design">Graphic Design</option>
+   </select>
    <br><br>
    <input type="submit" value="Add">
 </form>

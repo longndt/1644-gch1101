@@ -1,5 +1,29 @@
-<h1>Student Information</h1>
-<h3>Name: {{ sinhvien.ten }}</h3>
-<h3>Age: {{ sinhvien.tuoi }}</h3>
-<h3>Email: {{ sinhvien.email }}</h3>
-<h3>DOB: {{ sinhvien.ngaysinh }}</h3>
+<table border="1">
+   <tr>
+      <th colspan="2">Student Information</th>
+   </tr>
+   <tr>
+      <th>Name</th>
+      <td>{{student.name}}</td>
+   </tr>
+   <tr>
+      <th>Age</th>
+      <td>{{student.age}}</td>
+   </tr>
+   <tr>
+      <th>Email</th>
+      <td>{{student.email}}</td>
+   </tr>
+   <tr>
+      <th>Birthday</th>
+      <td>{{student.dob}}</td>
+   </tr>
+   <tr>
+      <th>Gender</th>
+      <td>{{student.gender}}</td>
+   </tr>
+   <tr>
+      <th>Major</th>
+      <td>{{student.major}}</td>
+   </tr>
+</table>
