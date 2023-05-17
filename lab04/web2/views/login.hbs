@@ -1,8 +1,16 @@
+<div class="container text-center bg-light card">
 <form action="/check" method="post">
-   <h1>System Login</h1>
-   Username: <input type="text" name="username" id="">
-   <br><br>
-   Password: <input type="password" name="password" id="">
-   <br><br>
-   <input type="submit" value="Login">
+   <div class="form-group mt-2 mb-2">
+      <h1 class="alert alert-warning">System Login</h1>
+      <label class="text text-danger">Username</label>
+      <input type="text" class="form-control" name="username">
+   </div>
+   <div class="form-group mt-2 mb-2">
+      <label class="text text-danger">Password</label>
+      <input type="password" class="form-control" name="password">
+   </div>
+   <div class="form-group mt-2 mb-2">
+      <input class="btn btn-primary" type="submit" value="Login">
+   </div>
 </form>
+</div>
