@@ -6,9 +6,13 @@ router.get('/', (req, res) => {
 });
 
 router.post('/message', (req, res) => {
-  var data = req.body;
-  var firstname = data.firstname;
-  var lastname = data.lastname;
+  //var data = req.body;
+  // var firstname = data.firstname;
+  // var lastname = data.lastname;
+  // var email = data.email;
+  // var phone = data.phone;
+  // var message = data.message;
+  res.render('message', { data: req.body });
 })
 
 module.exports = router;
