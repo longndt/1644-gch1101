@@ -12,7 +12,7 @@ router.post('/message', (req, res) => {
   // var email = data.email;
   // var phone = data.phone;
   // var message = data.message;
-  res.render('message', { data: req.body });
+  res.render('message', { form: req.body });
 })
 
 module.exports = router;
