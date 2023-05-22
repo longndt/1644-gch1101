@@ -10,6 +10,23 @@ var usersRouter = require('./routes/users');
 var app = express();
 var bodyParser =  require("body-parser");
 
+
+//1. khai báo thư viện mongoose
+var mongoose = require("mongoose");
+
+//2. khai báo uri của local & cloud DB
+//uri1 : local DB connection string
+var uri1 = "mongodb://localhost:27017";
+//uri2 : cloud DB connection string
+var uri2 = "mongodb+srv://longndt:VQjf2AZXxBQSdHJD@cluster0.idtjj4e.mongodb.net/";
+
+//3. check kết nối DB
+mongoose.connect(uri1)
+.then(() => console.log ("Connect to DB succeed !"))
+.catch((err) => console.log (err));
+
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
