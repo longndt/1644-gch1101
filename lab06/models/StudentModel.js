@@ -5,6 +5,7 @@ var StudentSchema = new mongoose.Schema({
    dob: Date,
    gender: String,
    gpa: Number,
+   avatar: String
 })
 
 var StudentModel = mongoose.model('student', StudentSchema, 'student');

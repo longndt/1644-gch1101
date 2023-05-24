@@ -1,12 +1,15 @@
-<table border="1">
+<table border="1" style="text-align:center">
    <tr>
-      <th colspan="4">STUDENT LIST</th>
+      <th colspan="5">STUDENT LIST</th>
+      <th><a href="/student/drop">DELETE ALL</a></th>
    </tr>
    <tr>
       <th>Student Name</th>
       <th>Student DoB</th>
       <th>Student Gender</th>
       <th>Student GPA</th>
+      <th>Student Avatar</th>
+      <th>DELETE</th>
    </tr>
    {{#each students }}
       <tr>
@@ -14,6 +17,9 @@
          <td>{{ dateFormat dob "DD/MM/YYYY" }}</td>
          <td>{{ gender }}</td>
          <td>{{ gpa }}</td>
+         <td><img src="{{ avatar }}" width="100" height="100"></td>
+         <td><a href="/student/delete/{{_id}}">Delete</a></td>
       </tr>
    {{/each}}
 </table>
+<br><br>
