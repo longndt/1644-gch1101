@@ -1,0 +1,19 @@
+<table border="1">
+   <tr>
+      <th colspan="4">STUDENT LIST</th>
+   </tr>
+   <tr>
+      <th>Student Name</th>
+      <th>Student DoB</th>
+      <th>Student Gender</th>
+      <th>Student GPA</th>
+   </tr>
+   {{#each students }}
+      <tr>
+         <td>{{ name }}</td>
+         <td>{{ dateFormat dob "DD/MM/YYYY" }}</td>
+         <td>{{ gender }}</td>
+         <td>{{ gpa }}</td>
+      </tr>
+   {{/each}}
+</table>

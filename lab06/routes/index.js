@@ -7,14 +7,14 @@ router.get("/student", async (req, res) => {
    //SQL: SELECT * FROM STUDENT
    const students = await StudentModel.find()
    //console.log(students);
-   res.send(students);
+   //res.send(students);
+   res.render("student", { students: students})
 })
 
 
 router.get("/subject", async (req, res) => {
     const subjects = await SubjectModel.find()
     res.send(subjects)
-
 })
 
 module.exports = router;

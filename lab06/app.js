@@ -9,6 +9,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+//khai báo và đăng ký thư viện dateformat cho hbs
+var hbs = require('hbs');
+hbs.registerHelper('dateFormat', require('handlebars-dateformat')); 
+
 //1. khai báo thư viện mongoose để connect đến database server
 var mongoose = require ('mongoose');
 
@@ -53,6 +57,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+//change port
 app.listen(5000);
 
 module.exports = app;
