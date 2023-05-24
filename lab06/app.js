@@ -18,7 +18,7 @@ var local = "mongodb://localhost:27017/gch1101";
 var cloud = "mongodb+srv://longndt:LZOJXV8cjLHFfYsQ@cluster0.gobiulx.mongodb.net/demo";
 
 //3. connect đến database server
-mongoose.connect(cloud)
+mongoose.connect(local)
 .then(() => { console.log ("Connect to DB succeed !")})
 //.catch((err) => { console.error(err)});
 .catch ((err) => { console.error("Connect to DB failed !") });
@@ -52,5 +52,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(5000);
 
 module.exports = app;
