@@ -19,7 +19,7 @@ var mongoose = require ('mongoose');
 //2. khai báo đường dẫn URI đến database server (local hoặc cloud)
 //Note: cần khai báo rõ tên của database cần sử dụng trong URI
 var local = "mongodb://localhost:27017/gch1101";
-var cloud = "mongodb+srv://longndt:LZOJXV8cjLHFfYsQ@cluster0.gobiulx.mongodb.net/gch1101";
+var cloud = "mongodb+srv://longndt:xxxxxx@cluster0.gobiulx.mongodb.net/gch1101";
 
 //3. connect đến database server
 mongoose.connect(cloud)
