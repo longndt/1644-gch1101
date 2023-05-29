@@ -9,16 +9,21 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-//cài đặt và cấu hình mongoose
+//khai báo và cấu hình mongoose
 const mongoose = require('mongoose');
-var uri = "mongodb://localhost:27017/gch1101"; //gch1101: tên của DB
+//note: DB URI phải là cloud (MongoDB Atlas) để có thể deploy web lên hosting
+var uri = "mongodb+srv://longndt:xxxxxx@cluster0.gobiulx.mongodb.net/gch1101"; //gch1101: tên của DB
 mongoose.connect(uri)
 .then(() => { console.log ('connect to DB succeed !')})
 .catch((err) => { console.error (err)});
 
-//cài đặt và cấu hình body-parser
+//khai báo và cấu hình body-parser
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended : false}));
+
+//khai báo và cấu hình dateFormat cho hbs
+var hbs = require('hbs');
+hbs.registerHelper('dateFormat', require('handlebars-dateformat')); 
 
 
 // view engine setup
@@ -51,7 +56,7 @@ app.use(function(err, req, res, next) {
 });
 
 //set cổng cho server
-var port = 3001;
+var port = process.env.PORT || 3001;
 app.listen(port);
 
 module.exports = app;
