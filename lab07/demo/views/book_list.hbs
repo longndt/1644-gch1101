@@ -1,0 +1,34 @@
+{{!-- table>(tr>th*2)+(tr>th*5)+(tr>td*5) --}}
+<table class="table table-success text-center">
+   <tr>
+      <th class="h2 text-danger" colspan="4">BOOK LIST</th>
+      <th>
+         <a class="btn btn-secondary" href="/add">Add</a>
+         <a class="btn btn-primary" href="/drop"  
+         onclick="return confirm('Are you sure to delete all books ?');">Drop</a>
+      </th>
+   </tr>
+   <tr class="h4 text-primary">
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Cover</th>
+      <th>Menu</th>
+   </tr>
+   {{!-- heach : foreach in hbs --}}
+   {{#each books }}
+      <tr class="h6">
+         <td>{{ title }}</td>
+         <td>{{ author }}</td>
+         <td>${{ price }}</td>
+         <td>
+            <a href="/detail/{{_id}}"><img src="{{ cover}}" width="150" height="200"></a>
+         </td>
+         <td>
+            <a class="btn btn-warning" href="/edit/{{_id}}">Edit</a>
+            <a class="btn btn-danger" href="/delete/{{_id}}" 
+            onclick="return confirm('Are you sure to delete this book ?');">Delete</a>
+         </td>
+      </tr>
+   {{/each}}
+</table>
