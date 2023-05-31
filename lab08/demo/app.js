@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 
 //4A. khai báo router tùy biến
 var studentRouter = require('./routes/student');
+var lecturerRouter = require('./routes/lecturer');
+var subjectRouter = require('./routes/subject');
 
 //khai báo thư viện hbs
 var hbs = require('hbs');
@@ -46,6 +48,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 //4B. sử dụng router tùy biến
 app.use('/student', studentRouter);
+app.use('/lecturer', lecturerRouter);
+app.use('/subject', subjectRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
