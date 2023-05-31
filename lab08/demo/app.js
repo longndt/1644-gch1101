@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 //4A. khai báo router tùy biến
-var studentRouter = require('/routes/student');
+var studentRouter = require('./routes/student');
 
 var app = express();
 
@@ -58,7 +58,7 @@ app.use(function(err, req, res, next) {
 });
 
 //3. set port để chạy được trên hosting
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || 3003;
 app.listen(port);
 
 module.exports = app;
