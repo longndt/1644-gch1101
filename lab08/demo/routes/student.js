@@ -28,9 +28,7 @@ router.get('/edit/:id', async (req, res) => {
 })
 
 router.post('/edit/:id', async (req, res) => {
-   var data = req.body;
-   var id = req.params.id;
-   var student = await StudentModel.findByIdAndUpdate(id,data);
+   var student = await StudentModel.findByIdAndUpdate(req.params.id, req.body);
    res.redirect('/student');
 })
 
