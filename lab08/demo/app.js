@@ -10,6 +10,12 @@ var usersRouter = require('./routes/users');
 //4A. khai báo router tùy biến
 var studentRouter = require('./routes/student');
 
+//khai báo thư viện hbs
+var hbs = require('hbs');
+//sử dụng helper "equal" để so sánh
+hbs.registerHelper('equal', require('handlebars-helper-equal'));
+
+
 var app = express();
 
 //1. mongoose : làm việc với database 

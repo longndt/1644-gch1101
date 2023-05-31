@@ -22,4 +22,16 @@ router.post('/add', async (req, res) => {
    res.redirect('/student');
 })
 
+router.get('/edit/:id', async (req, res) => {
+   var student = await StudentModel.findById(req.params.id);
+   res.render('student/edit', { student : student});
+})
+
+router.post('/edit/:id', async (req, res) => {
+   var data = req.body;
+   var id = req.params.id;
+   var student = await StudentModel.findByIdAndUpdate(id,data);
+   res.redirect('/student');
+})
+
 module.exports = router;

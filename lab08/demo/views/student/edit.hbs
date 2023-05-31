@@ -1,0 +1,41 @@
+<div class="container text-center mt-3 mb-3 col-md-8">
+   <form class="card bg-light ml-3 mr-3" action="/student/edit/{{student._id}}" method="post">
+      <h1 class="text text-primary mt-2 mb-2">Edit student</h1>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Full name</label>
+         <input class="form-control" type="text" name="full_name" required minlength="3" maxlength="30" value="{{ student.full_name }}">
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Birth year</label>
+         <input class="form-control" type="number" name="birth_year" required min="1900" max="2023" value="{{ student.birth_year }}">
+      </div>
+      <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Grade</label>
+            <input class="form-control" type="text" name="grade" required minlength="3" maxlength="30" value="{{ student.grade }}">
+      </div>
+      <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Gender</label><br>
+            {{#equal student.gender "Male"}}
+            <input type="radio" name="gender" value="Male" checked> Male
+            <input type="radio" name="gender" value="Female"> Female
+            {{/equal}}
+            {{#equal student.gender "Female"}}
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female" checked> Female
+            {{/equal}}
+      </div>
+      <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Email</label>
+            <input class="form-control" type="email" name="email" required minlength="3" maxlength="30" value="{{ student.email }}">
+      </div>
+      <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Image</label><br>
+            <img src="{{ student.image }}" width="100" height="150">
+            <input class="form-control" type="text" name="image" 
+            required value="{{ student.image }}">
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <input class="btn btn-danger" type="submit" value="Edit">
+      </div>
+   </form>
+</div>
