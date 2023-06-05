@@ -1,0 +1,20 @@
+<div class="container text-center">
+   <h1 class="text text-warning">Online Movie Store</h1>
+   <div class="card-group">
+      <div class="row">
+         {{#each movies }}
+         <div class="card col-md-3 mb-3">
+            <img class="card-img-top mt-3" src="{{ poster }}" width="180" height="150">
+            <div class="card-body">
+               <h4 class="card-title text-success">{{ title }}</h4>
+               <p class="fw-bold card-text text-primary">{{ year }}</p>
+               <form action="/movie/rent" method="post">
+                 <input type="hidden" name="id" value="{{_id}}">
+                 <input type="submit" class="btn btn-danger" value="Rent"/>
+               </form>
+            </div>
+         </div>
+         {{/each}}
+      </div>
+   </div>
+</div>
