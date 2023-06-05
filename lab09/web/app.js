@@ -53,4 +53,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+//setup port for deployment
+var port = process.env.PORT || 3001;
+app.listen(port); 
+
 module.exports = app;
