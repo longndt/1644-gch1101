@@ -1,0 +1,32 @@
+<div class="container text-center mt-3 mb-3 col-md-8">
+   <form class="card bg-light ml-3 mr-3" action="/movie/add" method="post">
+      <h1 class="text text-primary mt-2 mb-2">Add new movie</h1>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Movie title</label>
+         <input class="form-control" type="text" name="title" required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Movie director</label>
+         <input class="form-control" type="text" name="director" required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Movie actor</label>
+         <input class="form-control" type="text" name="actor" required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Movie year</label>
+         <input class="form-control" type="number" name="year" required min="2000" max="2023">
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Movie poster</label>
+         <input class="form-control" type="text" name="poster" required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Movie trailer</label>
+         <input class="form-control" type="text" name="trailer" required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <input class="btn btn-danger" type="submit" value="Add">
+      </div>
+</form>
+</div>
