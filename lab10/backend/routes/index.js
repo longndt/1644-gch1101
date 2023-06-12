@@ -9,12 +9,6 @@ router.get('/', async (req, res) => {
   res.send(students);
 })
 
-router.get('/:id', async (req, res) => {
-  var id = req.params.id;
-  var student = await StudentModel.findById(id);
-  res.send(student);
-})
-
 module.exports = router;
 
 

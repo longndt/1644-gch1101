@@ -9,6 +9,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+//cấu hình CORS (Cross-Origin Resource Sharing)
+var cors = require ('cors');
+app.use(cors());
+
 //cấu hình DB
 var mongoose = require('mongoose');
 var uri = "mongodb+srv://longndt:LZOJXV8cjLHFfYsQ@cluster0.gobiulx.mongodb.net/gch1101";
