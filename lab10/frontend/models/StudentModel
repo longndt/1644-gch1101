@@ -1,0 +1,13 @@
+var mongoose = require('mongoose');
+var StudentSchema = mongoose.Schema(
+   {
+      full_name : String,
+      birth_year : Number,
+      email : String,
+      grade : Number,
+      gender : String,
+      image : String
+   }
+);
+var StudentModel = mongoose.model('sinh vien', StudentSchema, 'student');
+module.exports = StudentModel;
