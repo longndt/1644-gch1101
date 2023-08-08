@@ -43,7 +43,8 @@ router.get('/edit/:id', async (req, res) => {
 
 router.post('/edit/:id', async (req, res) => {
    var id = req.params.id;
-   await MovieModel.findByIdAndUpdate(id)
+   var movie = req.body;
+   await MovieModel.findByIdAndUpdate(id, movie)
       .then(() => { console.log("Edit movie succeed !") });
    res.redirect('/movie');
 })
